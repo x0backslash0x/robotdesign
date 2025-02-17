@@ -9,8 +9,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.27947341847491775 -0.4735936355555443 -0.8352267217511817 5.052985756151997
-  position -0.8244369967929758 -1.4028623499695312 1.189969747415787
+  orientation 0.3715671748110306 -0.6369070349372766 -0.6754903873856057 4.85843698401163
+  position -0.31817344133052644 -0.4712228339465563 0.9072802817950537
 }
 TexturedBackground {
 }
@@ -90,7 +90,14 @@ Robot {
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 0.06 0
+      }
       endPoint Solid {
+        translation 0.05 0.06 0
+        rotation 0.7071067811865475 0 0.7071067811865475 1.57
+        name "wheel1"
       }
     }
     HingeJoint {
