@@ -12,3 +12,7 @@ Voeg een robot node toe op het einde van de scene tree, welke vier **HingeJoint 
 
 ## Stap 3
 Voeg een **HingeJointParameters node** toe, en voeg de de waarden die hierboven omschreven zijn toe. Voer de andere wielen moet je uiteraard aangepaste waarden invoeren. Some signs obviously have to be updated for other wheels.
+
+## Stap 4
+Vervolledig door de ontbrekende nodes toe te voegen zodat je onderstaand geheel bekomt. Vergeet niet om de Physics nodes te bepalen.
+![volledige nodetree](info/webots06_nodetree-volledig.png)
