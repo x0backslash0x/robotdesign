@@ -128,7 +128,7 @@ Robot {
       }
       device [
         RotationalMotor {
-          name "wheel1"
+          name "wheel2"
         }
       ]
       endPoint Solid {
@@ -158,7 +158,7 @@ Robot {
       }
       device [
         RotationalMotor {
-          name "wheel1"
+          name "wheel3"
         }
       ]
       endPoint Solid {
@@ -188,7 +188,7 @@ Robot {
       }
       device [
         RotationalMotor {
-          name "wheel1"
+          name "wheel4"
         }
       ]
       endPoint Solid {
