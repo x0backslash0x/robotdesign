@@ -9,8 +9,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.3715671748110306 -0.6369070349372766 -0.6754903873856057 4.85843698401163
-  position -0.31817344133052644 -0.4712228339465563 0.9072802817950537
+  orientation -0.3240966042399932 0.184152642914399 0.9279273652758319 2.171181307735492
+  position 0.5246147947791395 -0.7169717845768541 0.8495616741983993
 }
 TexturedBackground {
 }
@@ -79,6 +79,7 @@ Solid {
   boundingObject USE WALL_SHAPE
 }
 Robot {
+  translation 0 0 0.04
   children [
     Shape {
       appearance PBRAppearance {
@@ -209,6 +210,16 @@ Robot {
         boundingObject USE WHEEL
         physics USE WHEEL_PH
       }
+    }
+    DistanceSensor {
+      translation 0.1 0.025 0
+      rotation 0 0 1 0.3
+      name "ds_left"
+    }
+    DistanceSensor {
+      translation 0.1 -0.025 0
+      rotation 0 0 1 -0.3
+      name "ds_right"
     }
   ]
   physics Physics {

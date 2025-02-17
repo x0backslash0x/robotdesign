@@ -16,3 +16,6 @@ Voeg een **HingeJointParameters node** toe, en voeg de de waarden die hierboven 
 ## Stap 4
 Vervolledig door de ontbrekende nodes toe te voegen zodat je onderstaand geheel bekomt. Vergeet niet om de Physics nodes te bepalen.
 ![volledige nodetree](info/webots06_nodetree-volledig.png)
+
+## Stap 5
+Voeg  de twee afstandssensoren toe. Deze staan onder een hoek van 0.3 [rad] t.o.v. de Z-as van het robotlichaam. Stel de grafische en physical shape in op een kubus (Cube) waarbij elke zijde 0.01 [m] bedraagt. Stel de kleur in op blauw. Stel het name veld in op de tagnamen van de figuur in hoofdstuk doelstelling.
