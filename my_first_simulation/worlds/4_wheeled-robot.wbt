@@ -121,18 +121,93 @@ Robot {
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
       endPoint Solid {
-        name "solid(1)"
+        translation -0.05 0.06 0
+        rotation 1 0 0 1.57
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel2"
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
       endPoint Solid {
-        name "solid(2)"
+        translation -0.05 -0.06 0
+        rotation 1 0 0 1.57
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel3"
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
       endPoint Solid {
-        name "solid(3)"
+        translation 0.05 -0.06 0
+        rotation 1 0 0 1.57
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "wheel4"
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
       }
     }
   ]
