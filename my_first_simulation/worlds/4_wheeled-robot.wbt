@@ -78,3 +78,37 @@ Solid {
   name "wall section 4 USE"
   boundingObject USE WALL_SHAPE
 }
+Robot {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+    HingeJoint {
+      endPoint Solid {
+      }
+    }
+    HingeJoint {
+      endPoint Solid {
+        name "solid(1)"
+      }
+    }
+    HingeJoint {
+      endPoint Solid {
+        name "solid(2)"
+      }
+    }
+    HingeJoint {
+      endPoint Solid {
+        name "solid(3)"
+      }
+    }
+  ]
+  physics Physics {
+  }
+}
