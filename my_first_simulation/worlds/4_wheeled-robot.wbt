@@ -224,4 +224,5 @@ Robot {
   ]
   physics Physics {
   }
+  controller "four_wheeled_collision_avoidance"
 }
