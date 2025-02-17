@@ -1,0 +1,183 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material2 "halter"
+      coulombFriction [
+        0
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.3117058602249357 0.34501232611538796 -0.8853281603619544 1.5910626091679376
+  position -0.15527181516454486 1.5530877831556382 1.2748609310585373
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.345729 0.168059 0.05
+  rotation 0 0 1 0.00654498
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation 0.104203 -0.394294 0.104654
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.176163 0.189064 0.224654
+  rotation 0 0 1 0.562869
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.05
+}
+E-puck {
+  controller "epuck_avoid_collision"
+}
+Solid {
+  translation 0.2 0 0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "ball def geometry"
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.325671 -0.163858 0.2
+  children [
+    DEF BALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../../red_brick_wall.jpg"
+          ]
+        }
+      }
+      geometry Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  name "ball use shape"
+  boundingObject USE BALL_SHAPE
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 1
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 1.05 0.1
+      }
+    }
+  ]
+  name "wall section 1 DEF"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -0.5 0 0.05
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 2 USE"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5707996938995747
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 3 USE"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5707996938995747
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 4 USE"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -0.30072 -0.28 0.19
+  rotation 0 1 0 1.5708
+  children [
+    DEF G0 Group {
+      children [
+        Shape {
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+        Pose {
+          translation 0 0 -0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0 0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+                subdivision 2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "halter"
+  contactMaterial "halter"
+  boundingObject USE G0
+  physics Physics {
+    density -1
+    mass 2
+    centerOfMass [
+      0 0 0.01
+    ]
+  }
+}

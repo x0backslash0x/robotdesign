@@ -1,0 +1,80 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.27947341847491775 -0.4735936355555443 -0.8352267217511817 5.052985756151997
+  position -0.8244369967929758 -1.4028623499695312 1.189969747415787
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+WoodenBox {
+  translation -0.3457289999206368 0.168059000080409 0.049960760000000014
+  rotation 2.1530646428463904e-14 -1.3961840234954816e-14 0.9999999999999999 0.006544980000000004
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation 0.104203 -0.394294 0.104654
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.176163 0.18906400000000004 0.049990189999999504
+  rotation -2.7684566446519804e-17 2.2983937481228265e-17 1 0.5628690000000001
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.05
+}
+Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 1
+      }
+      geometry Box {
+        size 0.05 1.05 0.1
+      }
+    }
+  ]
+  name "wall section 1 DEF"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation -0.5 0 0.05
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 2 USE"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5707996938995747
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 3 USE"
+  boundingObject USE WALL_SHAPE
+}
+Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5707996938995747
+  children [
+    USE WALL_SHAPE
+  ]
+  name "wall section 4 USE"
+  boundingObject USE WALL_SHAPE
+}
