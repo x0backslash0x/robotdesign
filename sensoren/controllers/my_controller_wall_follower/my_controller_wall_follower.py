@@ -28,7 +28,7 @@ def run_robot(robot):
     while robot.step(timestep) != -1:
         # Read the sensors:
         for ind in range(8):
-            print("ind: {}, val: {}".format(ind, prox_sensors[ind].getValue()))))
+            print("ind: {}, val: {}".format(ind, prox_sensors[ind].getValue()))
         # Enter here functions to read sensor data, like:
         #  val = ds.getValue()
     
