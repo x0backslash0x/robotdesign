@@ -70,3 +70,9 @@ Wall {
   name "wall 9"
   size 0.5 0.01 0.1
 }
+Wall {
+  translation 0.795 0.2825 0
+  rotation 0 0 1 1.5707996938995747
+  name "wall 10"
+  size 0.475 0.01 0.1
+}
