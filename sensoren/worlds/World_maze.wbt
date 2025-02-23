@@ -65,3 +65,8 @@ Wall {
   name "wall 8"
   size 0.95 0.01 0.1
 }
+Wall {
+  translation 0.55 0.525 0
+  name "wall 9"
+  size 0.5 0.01 0.1
+}
