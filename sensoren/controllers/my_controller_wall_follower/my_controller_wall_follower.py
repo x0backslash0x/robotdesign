@@ -42,4 +42,4 @@ if __name__ == "__main__":
 
     #create the robot instance
     my_robot = Robot()
-    run_robot(myr_robot)
+    run_robot(my_robot)
