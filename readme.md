@@ -2,6 +2,26 @@ Repository voor Webots projecten bij OLOD Robot Design
 
 2024 - 2025 Electronica-ICT, Cybersecurity & Cloud
 
+# Projecten
+## Project playfield
+Jouw taak bestaat er in om een playfield te ontwerpen, in Webots, voor een e-puck wedstrijd.
+
+### Doel
+Het doel is om deze robot van een startlocatie autonoom te laten verplaatsen naar een andere locatie.
+
+### Vereisten
+Wat moet je realiseren?
+* Een wedstrijdveld omringd door muren
+* Het wedstrijdveld is 2 x 4 m groot
+* Het bevat één startlocatie weergegeven met een rechthoek
+* Bevat één eindlocatie weergegeven met een cirkel
+* Moet bestaan uit verschillende lijntracks bevatten tussen de locaties
+    - Er onderweg gekozen kan worden tussen verschillende alternatieven wegen die terug samenkomen op één punt
+    - De tracklijn op één punt volledig onderbroken is gedurende een "grote" afstand. De robot dient hier muren te volgen.
+    - De tracklijn op een bepaald gedeelte een stippellijn zijn
+    - Op één punt moet de de lijn zichzelf haaks kruisen
+    - Er minstens 1 bal en 2 dozen aanwezig zijn die verplaats kunnen worden. Je moet tijdens de simulatie de weg kunnen blokkeren.
+
 # Webots tutorials
 ## Tutorial 6
 In deze tutorial ga jij je eerste robot bouwen vanaf nul. De robot zal bestaand uit een robotframe, 4 wielen en 2 afstandssensoren. Het resultaat zie je hieronder.
