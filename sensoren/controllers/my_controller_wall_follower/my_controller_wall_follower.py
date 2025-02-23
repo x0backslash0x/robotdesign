@@ -46,12 +46,12 @@ def run_robot(robot):
             right_speed = -max_speed
             
         else:
-            if leftWall:
+            if leftWall and leftCorner:
                 print ("Drive forward")
                 left_speed = max_speed
                 right_speed = max_speed  
                    
-            else:
+            elif leftWall:
                 print("Turn left")
                 left_speed = max_speed/8
                 right_speed = max_speed          
