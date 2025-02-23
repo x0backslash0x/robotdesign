@@ -17,4 +17,15 @@ TexturedBackgroundLight {
 RectangleArena {
   name "playfield"
   floorSize 4 2
+  floorTileSize 4 2
+  floorAppearance Appearance {
+    texture ImageTexture {
+      url [
+        "../../info/playfield.png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+    }
+    name "track"
+  }
 }
