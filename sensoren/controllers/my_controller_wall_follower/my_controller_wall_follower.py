@@ -33,10 +33,32 @@ def run_robot(robot):
         #  val = ds.getValue()
     
         # Process sensor data here.
+        leftWall = prox_sensors[5].getValue() > 80
+        leftCorner = prox_sensors[6].getValue() > 80
+        frontWall = prox_sensors[7].getValue() > 80
     
+        left_speed = max_speed
+        right_speed = max_speed
+        
+        if frontWall:
+            print("Turn right")
+            left_speed = max_speed
+            right_speed = -max_speed
+            
+        else:
+            if leftWall:
+                print ("Drive forward")
+                left_speed = max_speed
+                right_speed = max_speed  
+                   
+            else:
+                print("Turn left")
+                left_speed = max_speed/8
+                right_speed = max_speed          
+                             
         # Enter here functions to send actuator commands, like:
-        leftMotor.setVelocity(max_speed)
-        rightMotor.setVelocity(max_speed)
+        leftMotor.setVelocity(left_speed)
+        rightMotor.setVelocity(right_speed)
        
 if __name__ == "__main__":
 
