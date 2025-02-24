@@ -149,6 +149,8 @@ PROTO FourWheelsRobot [
     ]
     boundingObject USE BODY
     physics Physics {
+        density -1
+        mass 1
     }
     controller "four_wheeled_collision_avoidance"
     }
