@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.22731480190890507 0.672728267291092 -0.7041055739167532 0.894864070883169
-  position -2.1730253275594937 1.7244073937085245 2.0093456685850666
+  orientation 0.29069257289984907 0.276256786268644 -0.9160676918772906 1.708945421973722
+  position 0.1859949764894122 0.3581322554382374 0.30757480538599213
 }
 TexturedBackground {
 }
@@ -28,6 +28,8 @@ RectangleArena {
   }
 }
 E-puck {
+  translation 0.173274 -0.0407115 0
+  rotation 0 0 1 1.309
   controller "my_controller_line_follower"
   groundSensorsSlot [
     DistanceSensor {
