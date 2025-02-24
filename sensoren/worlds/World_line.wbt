@@ -28,6 +28,7 @@ RectangleArena {
   }
 }
 E-puck {
+  controller "my_controller_line_follower"
   groundSensorsSlot [
     DistanceSensor {
       translation 0 -0.015 -0.01
