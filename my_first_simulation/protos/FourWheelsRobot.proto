@@ -1,10 +1,14 @@
 #VRML_SIM R2023b utf8
 
 PROTO FourWheelsRobot [
+    field SFVec3f    translation  0 0 0
+    field SFRotation rotation     0 0 1 0
+    field SFFloat    bodyMass     1
 ]
 {
     Robot {
-    translation 0 0 0.04
+    translation IS translation
+    rotation IS rotation
     children [
         DEF BODY Shape {
         appearance PBRAppearance {
@@ -150,7 +154,7 @@ PROTO FourWheelsRobot [
     boundingObject USE BODY
     physics Physics {
         density -1
-        mass 1
+        mass IS bodyMass
     }
     controller "four_wheeled_collision_avoidance"
     }
