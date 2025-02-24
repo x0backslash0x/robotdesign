@@ -1,7 +1,7 @@
 """my_controller_line_follower controller."""
 
 from controller import Robot
-varMax_speed = 6.28
+varMax_speed = 6.28 * 0.5
 
 def run_robot(robot): 
 
