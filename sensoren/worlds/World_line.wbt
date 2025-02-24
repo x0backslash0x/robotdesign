@@ -33,7 +33,7 @@ E-puck {
   controller "my_controller_line_follower"
   groundSensorsSlot [
     DistanceSensor {
-      translation 0 -0.015 -0.01
+      translation 0 -0.015 0.01
       rotation 0 1 0 0.26179939
       name "IR_Right"
       recognitionColors [
@@ -42,7 +42,7 @@ E-puck {
       type "infra-red"
     }
     DistanceSensor {
-      translation 0 0.015 -0.01
+      translation 0 0.015 0.01
       rotation 0 1 0 0.26179939
       name "IR_Left"
       recognitionColors [
