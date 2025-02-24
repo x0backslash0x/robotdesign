@@ -39,6 +39,15 @@ E-puck {
       type "infra-red"
     }
     DistanceSensor {
+      translation 0 0.015 -0.01
+      rotation 0 1 0 0.26179939
+      name "IR_Left"
+      recognitionColors [
+        0 0 0
+      ]
+      type "infra-red"
+    }
+    DistanceSensor {
       name "IR"
       type "infra-red"
     }
