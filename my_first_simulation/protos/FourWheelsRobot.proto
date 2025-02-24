@@ -6,7 +6,7 @@ PROTO FourWheelsRobot [
     Robot {
     translation 0 0 0.04
     children [
-        Shape {
+        DEF BODY Shape {
         appearance PBRAppearance {
             baseColor 1 0 0
             metalness 0
@@ -147,6 +147,7 @@ PROTO FourWheelsRobot [
         name "ds_right"
         }
     ]
+    boundingObject USE BODY
     physics Physics {
     }
     controller "four_wheeled_collision_avoidance"
