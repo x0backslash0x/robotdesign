@@ -1,6 +1,7 @@
 """my_controller_line_follower controller."""
 
 from controller import Robot
+# varMax_speed = 6.28
 varMax_speed = 6.28 * 0.5
 
 def run_robot(robot): 
@@ -24,6 +25,8 @@ def run_robot(robot):
     iRightIR = robot.getDevice('IR_Right')
     iRightIR.enable(timestep)
 
+    IRsensBlack = 1000
+
     # Main loop:
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(timestep) != -1:
@@ -34,6 +37,25 @@ def run_robot(robot):
         mLeftIR_Value = iLeftIR.getValue()
         mRightIR_Value = iRightIR.getValue()
         print("left: {} right: {}".format(mLeftIR_Value, mRightIR_Value))
+
+        detectRight = mRightIR_Value == IRsensBlack
+        detectLeft = mLeftIR_Value == IRsensBlack
+
+        if detectRight:
+            print("Turn right")
+            mRightSpeed =- varMax_speed
+            mLeftSpeed = varMax_speed
+
+        else:
+            if detectLeft:
+                print("Turn left")
+                mRightSpeed = varMax_speed
+                mLeftSpeed = -varMax_speed
+
+            elif not detectRight and not detectLeft:
+                print("Drive forward")
+                mRightSpeed = varMax_speed
+                mLeftSpeed = varMax_speed
 
         # Enter here functions to send actuator commands, like:
         oLeftMotor.setVelocity(mLeftSpeed)
