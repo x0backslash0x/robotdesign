@@ -28,6 +28,17 @@ Wat moet je realiseren?
     - Op één punt moet de de lijn zichzelf haaks kruisen
     - Er minstens 1 bal en 2 dozen aanwezig zijn die verplaats kunnen worden. Je moet tijdens de simulatie de weg kunnen blokkeren.
 
+## Project geleiding
+### Stappen
+* basis frame
+    -   body
+    - wielen
+* bumpber
+    - druksensoren
+    - IR-sensoren
+    - frame
+* robot laten rijden (voorlopig enkel vooruit)
+
 
 ## Oefening sensoren 1: Analoge afstandssensor gebruiken als digitale sensor
 ### Beschrijving
