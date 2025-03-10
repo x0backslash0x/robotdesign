@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0944
-  position 0 0 10
+  orientation -0.5792747728332803 0.5763856077136865 0.5763856077136865 2.100168683400588
+  position 5.2243838962476674e-05 -0.011756931688722175 7.674924877364518
 }
 TexturedBackground {
 }
@@ -16,4 +16,116 @@ TexturedBackgroundLight {
 }
 RectangleArena {
   floorSize 5 5
+}
+Robot {
+  children [
+    Solid {
+      children [
+        DEF BODY Shape {
+          appearance PBRAppearance {
+            baseColor 0.5 0.5 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.082
+            radius 0.35
+          }
+        }
+      ]
+      name "body"
+      boundingObject USE BODY
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.2 0 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel_right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.2 0 0
+        rotation 0 1 0 1.5707996938995747
+        children [
+          DEF WHEEL_BIG Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 0.5 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.07
+              radius 0.07
+            }
+          }
+        ]
+        name " wheel_right"
+        boundingObject USE WHEEL_BIG
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor -0.2 0 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel_left"
+        }
+      ]
+      endPoint Solid {
+        translation -0.2 0 0
+        rotation 0 1 0 1.5707996938995747
+        children [
+          USE WHEEL_BIG
+        ]
+        name "wheel_left"
+        boundingObject DEF WHEEL_BIG Shape {
+          appearance PBRAppearance {
+            baseColor 0.5 0.5 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.07
+            radius 0.07
+          }
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0 0.2 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel_front"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.2 0
+        rotation 0 1 0 1.5707996938995747
+        children [
+          DEF WHEEL_SMALL Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 0.5 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.07
+              radius 0.07
+            }
+          }
+        ]
+        name "wheel_front"
+        boundingObject USE WHEEL_SMALL
+      }
+    }
+  ]
+  name "Rony de robotstofzuiger"
+  model "Mijia G1"
+  boundingObject USE BODY
+  physics Physics {
+  }
 }
