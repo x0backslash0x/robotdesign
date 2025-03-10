@@ -30,8 +30,8 @@ Wat moet je realiseren?
 
 ## Project geleiding
 ### Stappen
-* basis frame
-    -   body
+* body
+    - frame
     - wielen
 * bumpber
     - druksensoren
