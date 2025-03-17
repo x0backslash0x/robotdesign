@@ -340,6 +340,10 @@ Bewaar je project, back-up je volledige projectstructuur in één zip bestand en
     }
 </style>
 
+## sensoren 3: Lidar
+### Doelstelling
+Doelstelling van deze oefening is om de werking te begrijpen van een Lidar sensor en deze in te zetten om botsingen met objecten te voorkomen. Dit doe je door een e-puck robot te programmeren die uitgebreid wordt met een Lidar sensor.
+
 # Webots tutorials
 ## Tutorial 6
 In deze tutorial ga jij je eerste robot bouwen vanaf nul. De robot zal bestaand uit een robotframe, 4 wielen en 2 afstandssensoren. Het resultaat zie je hieronder.
