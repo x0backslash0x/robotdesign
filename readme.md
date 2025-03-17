@@ -29,7 +29,8 @@ Wat moet je realiseren?
     - Er minstens 1 bal en 2 dozen aanwezig zijn die verplaats kunnen worden. Je moet tijdens de simulatie de weg kunnen blokkeren.
 
 
-## Oefening sensoren 1: Analoge afstandssensor gebruiken als digitale sensor
+# Oefeningen
+## sensoren 1: Analoge afstandssensor als digitale sensor
 ### Beschrijving
 Gebaseerd op - Webots Tutorial Project Wall follower robot using e-puck - Kajal Gada
 
@@ -212,7 +213,7 @@ De werking is niet optimaal. Verbeter de werking door gebruik te maken van senso
 Bewaar je project, back-up je volledige projectstructuur in één zip bestand en laad dit op in de Uploadzone van de oefeningen.
 
 
-## Oefening sensoren 2: IR sensor
+## sensoren 2: IR sensor
 ### 2.
 Maak het speelveld 1x2 meter groot en plaats hierop de [gegeven](info/sensoren1-Arena.png) tekening.
 
