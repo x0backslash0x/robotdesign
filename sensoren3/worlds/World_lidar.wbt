@@ -3,16 +3,24 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/CircleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.30574400829403303 0.23994657545278777 0.9213827881617812 1.8894821907899242
-  position 0.6354803614007659 -2.486036064096593 1.928585691667613
+  orientation -0.011015528691650558 0.999488140315404 0.030035237580190544 0.7036303738761157
+  position -0.5969876009158748 -0.0040955950561975644 0.74234579871264
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 CircleArena {
+}
+E-puck {
+  turretSlot [
+    Lidar {
+      translation 0.02 0 0.001
+    }
+  ]
 }

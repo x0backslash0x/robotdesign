@@ -344,6 +344,20 @@ Bewaar je project, back-up je volledige projectstructuur in één zip bestand en
 ### Doelstelling
 Doelstelling van deze oefening is om de werking te begrijpen van een Lidar sensor en deze in te zetten om botsingen met objecten te voorkomen. Dit doe je door een e-puck robot te programmeren die uitgebreid wordt met een Lidar sensor.
 
+### Opstelling
+De wereld bevat een circular arena.
+In de arena bevindt zich een e-puck robot
+De e-puck robot is uitgerust met een Lidar sensor
+
+De Lidar sensor geeft het meetbereik weer met volgende kenmerken
+
+* Er wordt gemeten op *4 hoogteniveaus* instelbaar via `numberOfLayers`
+* Elk hoogteniveau bestaat uit *512 laserstralen* instelbaar via `horizontalResolution`
+* De sensor is van het type *niet draaiend* en instelbaar via `type`
+* De sensor heeft een *max. meetbereik* van 100 % meetbereik instelbaar via `maxRange`
+* De sensor heeft een *min. meetbereik* van 1% meetbereik instelbaar via `minRange`
+* De sensor neemt voorwerpen waar in *een gebied bepaald door de hoek (RAD)* `fieldOfView`
+
 # Webots tutorials
 ## Tutorial 6
 In deze tutorial ga jij je eerste robot bouwen vanaf nul. De robot zal bestaand uit een robotframe, 4 wielen en 2 afstandssensoren. Het resultaat zie je hieronder.
