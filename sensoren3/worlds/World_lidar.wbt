@@ -19,6 +19,7 @@ TexturedBackgroundLight {
 CircleArena {
 }
 E-puck {
+  controller "e-puck_lidar"
   turretSlot [
     Lidar {
       translation 0.02 0 0.001
