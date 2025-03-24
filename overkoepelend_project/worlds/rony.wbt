@@ -19,21 +19,15 @@ RectangleArena {
 }
 Robot {
   children [
-    Solid {
-      children [
-        DEF BODY Shape {
-          appearance PBRAppearance {
-            baseColor 0.5 0.5 1
-            metalness 0
-          }
-          geometry Cylinder {
-            height 0.082
-            radius 0.35
-          }
+    DEF BODY Shape {
+        appearance PBRAppearance {
+          baseColor 0.5 0.5 1
+          metalness 0
         }
-      ]
-      name "body"
-      boundingObject USE BODY
+        geometry Cylinder {
+          height 0.082
+          radius 0.35
+        }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
