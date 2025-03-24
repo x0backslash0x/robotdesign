@@ -40,7 +40,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.2 0 0
+        translation 0.2 -0.1 -0.04
         rotation 0 1 0 1.5707996938995747
         children [
           DEF WHEEL_BIG Shape {
@@ -71,7 +71,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.2 0 0
+        translation -0.2 -0.1 -0.04
         rotation 0 1 0 1.5707996938995747
         children [
           USE WHEEL_BIG
@@ -102,7 +102,7 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0 0.2 0
+        translation 0 0.2 -0.04
         rotation 0 1 0 1.5707996938995747
         children [
           DEF WHEEL_SMALL Shape {
