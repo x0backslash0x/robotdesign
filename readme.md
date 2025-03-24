@@ -39,6 +39,15 @@ Wat moet je realiseren?
     - frame
 * robot laten rijden (voorlopig enkel vooruit)
 
+### Technische gegevens
+model: Xiaomi Mi robot Vacuum mop Essential
+hoogte: 8,2cm
+diameter: 35cm
+wielen: 3
+sensoren
+* druksensoren: 3
+* IR-sensoren: 5
+* batterij sensor
 
 ## Oefening sensoren 1: Analoge afstandssensor gebruiken als digitale sensor
 ### Beschrijving
