@@ -1,5 +1,7 @@
 """Elisa_bumper controller."""
 
+# You may need to import some classes of the controller module. Ex:
+#  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
 
 #=============================================================
@@ -35,23 +37,23 @@ def defRobotControl(robot):
     #Reset velocity of both wheels
     varSpeedLe = 0.0
     varSpeedRi = 0.0
-
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(varTimeStep) != -1:
         #Move forward
-        max_speed = 12
-        devMotLe.setVelocity(max_speed)
-        devMotRi.setVelocity(max_speed)
+        varSpeedLe = varMaxSpeed * 0.25
+        varSpeedRi = varMaxSpeed * 0.25
      
         # Read the bumper sensors
-        bumb = devBumper.getValue()
+        print(devBumper.getValue())
+        if devBumper.getValue() == 1.0:
+            varSpeedLe = -varMaxSpeed*0.25
+            print("Turning left")
+            print(devBumper.getValue())
     
         # Control the motors
-        if bumb:
-            devMotLe.setVelocity(-max_speed)
-            devMotRi.setVelocity(max_speed)
-
-
+        devMotLe.setVelocity(varSpeedLe)
+        devMotRi.setVelocity(varSpeedRi)
+        
 #=============================================================
 #POU:Main
 #=============================================================
@@ -60,3 +62,4 @@ if __name__ == "__main__":
     #Create the Elisa robot instance
     myRobot = Robot()
     defRobotControl(myRobot)
+    
