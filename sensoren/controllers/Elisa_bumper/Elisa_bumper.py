@@ -39,10 +39,18 @@ def defRobotControl(robot):
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(varTimeStep) != -1:
         #Move forward
+        max_speed = 12
+        devMotLe.setVelocity(max_speed)
+        devMotRi.setVelocity(max_speed)
      
         # Read the bumper sensors
+        bumb = devBumper.getValue()
     
         # Control the motors
+        if bumb:
+            devMotLe.setVelocity(-max_speed)
+            devMotRi.setVelocity(max_speed)
+
 
 #=============================================================
 #POU:Main
