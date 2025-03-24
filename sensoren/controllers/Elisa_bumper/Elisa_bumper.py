@@ -3,6 +3,7 @@
 # You may need to import some classes of the controller module. Ex:
 #  from controller import Robot, Motor, DistanceSensor
 from controller import Robot
+from math import atan2
 
 #=============================================================
 #Global vars
@@ -33,6 +34,14 @@ def defRobotControl(robot):
     #Enable bumper sensor
     devBumper = robot.getDevice('touch sensor')
     devBumper.enable(varTimeStep)
+
+    #Enable compass
+    devCompass = robot.getDevice('compass')
+    devCompass.enable(varTimeStep)
+
+    #Enable arrow
+    devNeedle = robot.getDevice('arrow')
+    
     
     #Reset velocity of both wheels
     varSpeedLe = 0.0
@@ -49,6 +58,12 @@ def defRobotControl(robot):
             varSpeedLe = -varMaxSpeed*0.25
             print("Turning left")
             print(devBumper.getValue())
+
+        # Read the compass
+        varNorth = devCompass.getValues()
+        # Read the arrow
+        varAngle = atan2(varNorth[1], varNorth[0])
+        devNeedle.setPosition(varAngle)
     
         # Control the motors
         devMotLe.setVelocity(varSpeedLe)

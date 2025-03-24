@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5239760555093778 0.480626193017395 0.7031696494007966 1.9959011135323803
-  position -0.12017480399594833 -0.37891038110554276 0.3472885387051918
+  orientation -0.46704667112958403 0.4641375160731933 0.7526245897924013 1.8572402361645675
+  position -0.1250955550431148 -0.4672466643171236 0.43030409293613425
 }
 TexturedBackground {
 }
@@ -19,11 +19,14 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Elisa3 {
-  translation -0.167412 -0.299659 0
+  translation -0.225366 -0.315187 0
   rotation 0 0 1 0.261799
   controller "Elisa_bumper"
   extensionSlot [
     DEF NEEDLE HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+      }
       device [
         RotationalMotor {
           name "arrow"
@@ -31,7 +34,7 @@ Elisa3 {
       ]
       endPoint Solid {
         translation 1.03647e-08 0.01 0.03
-        rotation 0.5773489358556708 -0.5773509358554485 -0.5773509358554485 -2.094395307179586
+        rotation -0.5773489358556708 0.5773509358554485 0.5773509358554485 2.094395307179586
         children [
           Shape {
             appearance PBRAppearance {
@@ -47,7 +50,6 @@ Elisa3 {
           }
         ]
         name "solid(1)"
-        boundingObject USE NEEDLE_BODY
       }
     }
     Compass {
