@@ -1,0 +1,56 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/elisa/protos/Elisa3.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.353422419762568 0.2661171088376722 0.8968134017693143 1.9537232713151
+  position 0.304971274682114 -0.9971597269144064 1.0007007224274287
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Elisa3 {
+  controller "Elisa_bumper"
+  extensionSlot [
+    TouchSensor {
+      translation 0.03 0 0.01
+      children [
+        DEF BUMPER Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.001 0.02 0.001
+          }
+        }
+      ]
+      boundingObject USE BUMPER
+    }
+  ]
+}
+WoodenBox {
+  translation -0.233823 0.135 0.05
+  rotation 0 0 1 -0.523595307179586
+  name "wooden box 1"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.0732373 -0.282427 0.05
+  rotation 0 0 1 -1.3089953071795861
+  name "wooden box 2"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.241866 0.16434 0.05
+  rotation 0 0 1 -1.3089953071795861
+  name "wooden box 3"
+  size 0.1 0.1 0.1
+}
