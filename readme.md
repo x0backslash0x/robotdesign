@@ -28,6 +28,8 @@ Wat moet je realiseren?
     - Op één punt moet de de lijn zichzelf haaks kruisen
     - Er minstens 1 bal en 2 dozen aanwezig zijn die verplaats kunnen worden. Je moet tijdens de simulatie de weg kunnen blokkeren.
 
+## Project AGV
+
 
 # Oefeningen
 ## sensoren 1: Analoge afstandssensor als digitale sensor
