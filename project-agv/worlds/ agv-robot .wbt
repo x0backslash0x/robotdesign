@@ -7,15 +7,15 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2562040897392773 0.8671817677320875 0.42703073204854936 1.2104918675011214
-  position -1.2067686641544904 -0.6846197428452396 2.52423540822852
+  orientation 0.44520506652317426 -0.7532567892918626 -0.4841452861774144 4.514193903976105
+  position -0.27274077490246407 -0.07238394847701884 2.8858949516867587
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  floorSize 2 2
+  floorSize 0.5 0.5
   floorTileSize 0.1 0.1
   wallHeight 0.001
 }
@@ -27,6 +27,51 @@ Robot {
       children [
         Group {
           children [
+            DEF hoek_onder_3l Transform {
+              translation -0.201055 0.29038 0
+              rotation 0 0 1 -0.9312
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0.2 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.08 0.07
+                  }
+                }
+              ]
+            }
+            DEF hoek_onder_2l Transform {
+              translation -0.113324 -0.334491 0
+              rotation 0 0 1 -0.31355
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.1 0 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.2 0.07 0.07
+                  }
+                }
+              ]
+            }
+            DEF hoek_onder_1l Transform {
+              translation -0.224142 -0.3 0
+              rotation 0 0 1 -0.785395307179586
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.04 0.04 0.07
+                  }
+                }
+              ]
+            }
             Transform {
               translation 0 0.025 0
               children [
