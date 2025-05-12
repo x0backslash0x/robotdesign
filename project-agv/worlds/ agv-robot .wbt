@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5736182124466217 -0.6028340194201335 0.5545748744572807 4.196981428104866
-  position 0.12133219852081523 -0.13573040466973615 2.754757844074265
+  orientation -0.43919001470505964 0.18073639290966417 0.8800264128203045 2.4466833383371007
+  position 1.7531386695404234 -1.235497029064341 2.870629677892647
 }
 TexturedBackground {
 }
@@ -28,8 +28,23 @@ Robot {
         Group {
           children [
             DEF hoek_onder_3l Pose {
-              translation -0.201055 0.29038 0
-              rotation 0 0 1 -0.9312
+              translation -0.199 0.292 0
+              rotation 0 0 1 -0.9412
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0.2 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.08 0.07
+                  }
+                }
+              ]
+            }
+            DEF hoek_onder_3r Pose {
+              translation 0.199 0.292 0
+              rotation 0 0 -1 -0.9412
               children [
                 Shape {
                   appearance PBRAppearance {
@@ -43,8 +58,23 @@ Robot {
               ]
             }
             DEF hoek_onder_2l Pose {
-              translation -0.113324 -0.334491 0
-              rotation 0 0 1 -0.31355
+              translation -0.122836 -0.326363 0
+              rotation 0 0 -1 0.35045
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.1 0 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.2 0.07 0.07
+                  }
+                }
+              ]
+            }
+            DEF hoek_onder_2r Pose {
+              translation 0.122836 -0.326363 0
+              rotation 0 0 1 0.35045
               children [
                 Shape {
                   appearance PBRAppearance {
