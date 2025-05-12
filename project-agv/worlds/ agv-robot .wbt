@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5736182124466217 -0.6028340194201335 0.5545748744572807 4.196981428104866
-  position 0.12133219852081523 -0.13573040466973615 2.754757844074265
+  orientation -0.3382092729834514 0.3564498114969644 0.87095236353763 1.656339598799766
+  position 0.022891117445510468 -1.4234658614455857 1.2595010622355713
 }
 TexturedBackground {
 }
@@ -43,8 +43,23 @@ Robot {
               ]
             }
             DEF hoek_onder_2l Pose {
-              translation -0.113324 -0.334491 0
-              rotation 0 0 1 -0.31355
+              translation -0.122836 -0.326363 0
+              rotation 0 0 -1 0.35045
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.1 0 0
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.2 0.07 0.07
+                  }
+                }
+              ]
+            }
+            DEF hoek_onder_2r Pose {
+              translation 0.122836 -0.326363 0
+              rotation 0 0 1 0.35045
               children [
                 Shape {
                   appearance PBRAppearance {
