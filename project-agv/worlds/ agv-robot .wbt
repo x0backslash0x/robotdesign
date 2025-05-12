@@ -7,13 +7,87 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773502691896257 0.5773502691896257 0.5773502691896257 2.0944
-  position 0 0 10
+  orientation -0.2562040897392773 0.8671817677320875 0.42703073204854936 1.2104918675011214
+  position -1.2067686641544904 -0.6846197428452396 2.52423540822852
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 2 2
   floorTileSize 0.1 0.1
+  wallHeight 0.001
+}
+Robot {
+  translation 0 0 -0.01
+  children [
+    Solid {
+      translation 0 0 0.175
+      children [
+        Group {
+          children [
+            Transform {
+              translation 0 0.025 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 1 0.1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.38 0.645 0.07
+                  }
+                }
+              ]
+            }
+            Transform {
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.3 0.3 0.3
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.51 0.6 0.07
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 -0.015 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 1 0 0.2
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.455 0.62 0.07
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 0 -0.023 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0 0.5 1
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.74 0.07
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      name "bodemplaat"
+    }
+  ]
+  name "AGV"
+  model "proANT436"
 }
