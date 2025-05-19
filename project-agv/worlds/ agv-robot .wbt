@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.40516976133252774 0.612029160759311 0.6791596063385953 1.5452314246763117
-  position -0.13693416777221368 -1.3162996260088187 2.623338120423795
+  orientation -0.07155754253743234 0.02903139139741107 0.9970138897826519 2.3728806714665676
+  position 1.8894837902369614 -1.8254719222759253 0.6262038247336297
 }
 TexturedBackground {
 }
@@ -176,6 +176,151 @@ Robot {
         }
       ]
       name "bodemplaat"
+    }
+    Solid {
+      translation 0 0 0.425
+      children [
+        Group {
+          children [
+            DEF hoek_boven_3l Pose {
+              translation -0.199 0.292 0
+              rotation 0 0 1 -0.9412
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.08 0.18
+                  }
+                }
+              ]
+            }
+            DEF hoek_boven_3r Pose {
+              translation 0.199 0.292 0
+              rotation 0 0 -1 -0.9412
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.08 0.18
+                  }
+                }
+              ]
+            }
+            DEF hoek_boven_2l Pose {
+              translation -0.122836 -0.326363 0
+              rotation 0 0 -1 0.35045
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.2 0.07 0.18
+                  }
+                }
+              ]
+            }
+            DEF hoek_boven_2r Pose {
+              translation 0.122836 -0.326363 0
+              rotation 0 0 1 0.35045
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.2 0.07 0.18
+                  }
+                }
+              ]
+            }
+            DEF hoek_boven_1r Pose {
+              translation -0.2286 -0.29829 0
+              rotation 0 0 1 -0.741073
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.038 0.038 0.18
+                  }
+                }
+              ]
+            }
+            DEF hoek_boven_1l Pose {
+              translation 0.2288 -0.29884 0
+              rotation 0 0 1 -0.81107
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.038 0.038 0.18
+                  }
+                }
+              ]
+            }
+            DEF middenstuk_boven_a Pose {
+              translation 0 0.025 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.38 0.645 0.18
+                  }
+                }
+              ]
+            }
+            DEF middenstuk_boven_b Pose {
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.51 0.6 0.18
+                  }
+                }
+              ]
+            }
+            DEF middenstuk_boven_c Pose {
+              translation 0 -0.015 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.455 0.62 0.18
+                  }
+                }
+              ]
+            }
+            DEF middenstuk_boven_d Pose {
+              translation 0 -0.023 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 0.08 0.74 0.18
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+      name "bovenplaat"
     }
   ]
   name "AGV"
