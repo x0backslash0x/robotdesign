@@ -7,21 +7,82 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07155754253743234 0.02903139139741107 0.9970138897826519 2.3728806714665676
-  position 1.8894837902369614 -1.8254719222759253 0.6262038247336297
+  orientation -0.23174277926424453 0.13358173949209898 0.9635617277233196 2.1276171569236935
+  position 1.0509737985960932 -1.8118203546846443 1.1580888758761998
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  floorSize 0.5 0.5
   floorTileSize 0.1 0.1
   wallHeight 0.001
 }
 Robot {
   translation 0 0 -0.01
   children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.5 0.5 0.5
+      }
+      device [
+        RotationalMotor {
+          name "motor_right"
+        }
+      ]
+      endPoint Solid {
+        translation 0.27 0 0.17000000000000004
+        rotation 0 -0.9999999999999999 0 1.5707953071795862
+        children [
+          DEF WHEEL_R Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.075
+            }
+          }
+        ]
+        name "wheel_right"
+        boundingObject USE WHEEL_R
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.5 0.5 0.5
+      }
+      device [
+        RotationalMotor {
+          name "motor_right"
+        }
+      ]
+      endPoint Solid {
+        translation -0.27 0 0.17000000000000004
+        rotation 0 -0.9999999999999999 0 1.5707953071795862
+        children [
+          DEF WHEEL_R Shape {
+            appearance PBRAppearance {
+              baseColor 1 1 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.075
+            }
+          }
+        ]
+        name "wheel_left"
+        boundingObject USE WHEEL_R
+        physics Physics {
+        }
+      }
+    }
     Solid {
       translation 0 0 0.175
       children [
