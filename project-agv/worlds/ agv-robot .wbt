@@ -77,311 +77,298 @@ Robot {
             }
           }
         ]
-        name "wheel_left"
-        boundingObject USE WHEEL_R
-        physics Physics {
-        }
+        name "solid(1)"
       }
     }
-    Solid {
+    DEF bodemplaat Transform {
       translation 0 0 0.175
       children [
-        Group {
+        DEF hoek_onder_3l Pose {
+          translation -0.199 0.292 0
+          rotation 0 0 1 -0.9412
           children [
-            DEF hoek_onder_3l Pose {
-              translation -0.199 0.292 0
-              rotation 0 0 1 -0.9412
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.08 0.07
-                  }
-                }
-              ]
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.08 0.07
+              }
             }
-            DEF hoek_onder_3r Pose {
-              translation 0.199 0.292 0
-              rotation 0 0 -1 -0.9412
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.08 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_onder_3r Pose {
+          translation 0.199 0.292 0
+          rotation 0 0 -1 -0.9412
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.08 0.07
+              }
             }
-            DEF hoek_onder_2l Pose {
-              translation -0.122836 -0.326363 0
-              rotation 0 0 -1 0.35045
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.2 0.07 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_onder_2l Pose {
+          translation -0.122836 -0.326363 0
+          rotation 0 0 -1 0.35045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.2 0.07 0.07
+              }
             }
-            DEF hoek_onder_2r Pose {
-              translation 0.122836 -0.326363 0
-              rotation 0 0 1 0.35045
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.2 0.07 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_onder_2r Pose {
+          translation 0.122836 -0.326363 0
+          rotation 0 0 1 0.35045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.2 0.07 0.07
+              }
             }
-            DEF hoek_onder_1r Pose {
-              translation -0.2286 -0.29829 0
-              rotation 0 0 1 -0.741073
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.038 0.038 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_onder_1r Pose {
+          translation -0.2286 -0.29829 0
+          rotation 0 0 1 -0.741073
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.038 0.038 0.07
+              }
             }
-            DEF hoek_onder_1l Pose {
-              translation 0.2288 -0.29884 0
-              rotation 0 0 1 -0.81107
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.038 0.038 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_onder_1l Pose {
+          translation 0.2288 -0.29884 0
+          rotation 0 0 1 -0.81107
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.038 0.038 0.07
+              }
             }
-            Pose {
-              translation 0 0.025 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.38 0.645 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_onder_a Pose {
+          translation 0 0.025 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.38 0.645 0.07
+              }
             }
-            Pose {
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.51 0.6 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_onder_b Pose {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.51 0.6 0.07
+              }
             }
-            Pose {
-              translation 0 -0.015 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.455 0.62 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_onder_c Pose {
+          translation 0 -0.015 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.455 0.62 0.07
+              }
             }
-            Pose {
-              translation 0 -0.023 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    baseColor 0 0 0
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.74 0.07
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_onder_d Pose {
+          translation 0 -0.023 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.74 0.07
+              }
             }
           ]
         }
       ]
-      name "bodemplaat"
     }
-    Solid {
+    DEF bovenplaat Transform {
       translation 0 0 0.425
       children [
-        Group {
+        DEF hoek_boven_3l Pose {
+          translation -0.199 0.292 0
+          rotation 0 0 1 -0.9412
           children [
-            DEF hoek_boven_3l Pose {
-              translation -0.199 0.292 0
-              rotation 0 0 1 -0.9412
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.08 0.18
-                  }
-                }
-              ]
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.08 0.18
+              }
             }
-            DEF hoek_boven_3r Pose {
-              translation 0.199 0.292 0
-              rotation 0 0 -1 -0.9412
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.08 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_boven_3r Pose {
+          translation 0.199 0.292 0
+          rotation 0 0 -1 -0.9412
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.08 0.18
+              }
             }
-            DEF hoek_boven_2l Pose {
-              translation -0.122836 -0.326363 0
-              rotation 0 0 -1 0.35045
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.2 0.07 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_boven_2l Pose {
+          translation -0.122836 -0.326363 0
+          rotation 0 0 -1 0.35045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.2 0.07 0.18
+              }
             }
-            DEF hoek_boven_2r Pose {
-              translation 0.122836 -0.326363 0
-              rotation 0 0 1 0.35045
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.2 0.07 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_boven_2r Pose {
+          translation 0.122836 -0.326363 0
+          rotation 0 0 1 0.35045
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.2 0.07 0.18
+              }
             }
-            DEF hoek_boven_1r Pose {
-              translation -0.2286 -0.29829 0
-              rotation 0 0 1 -0.741073
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.038 0.038 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_boven_1r Pose {
+          translation -0.2286 -0.29829 0
+          rotation 0 0 1 -0.741073
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.038 0.038 0.18
+              }
             }
-            DEF hoek_boven_1l Pose {
-              translation 0.2288 -0.29884 0
-              rotation 0 0 1 -0.81107
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.038 0.038 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF hoek_boven_1l Pose {
+          translation 0.2288 -0.29884 0
+          rotation 0 0 1 -0.81107
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.038 0.038 0.18
+              }
             }
-            DEF middenstuk_boven_a Pose {
-              translation 0 0.025 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.38 0.645 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_boven_a Pose {
+          translation 0 0.025 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.38 0.645 0.18
+              }
             }
-            DEF middenstuk_boven_b Pose {
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.51 0.6 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_boven_b Pose {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.51 0.6 0.18
+              }
             }
-            DEF middenstuk_boven_c Pose {
-              translation 0 -0.015 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.455 0.62 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_boven_c Pose {
+          translation 0 -0.015 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.455 0.62 0.18
+              }
             }
-            DEF middenstuk_boven_d Pose {
-              translation 0 -0.023 0
-              children [
-                Shape {
-                  appearance PBRAppearance {
-                    metalness 0
-                  }
-                  geometry Box {
-                    size 0.08 0.74 0.18
-                  }
-                }
-              ]
+          ]
+        }
+        DEF middenstuk_boven_d Pose {
+          translation 0 -0.023 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.08 0.74 0.18
+              }
             }
           ]
         }
       ]
-      name "bovenplaat"
     }
   ]
   name "AGV"
