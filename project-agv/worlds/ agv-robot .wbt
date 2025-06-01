@@ -7,7 +7,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.09980025979613452 0.09246887550929882 0.990701476332134 1.656360869125714
+  orientation -0.10041299314092118 0.09315328279323416 0.990575437164341 1.6552385846565125
   position 0.020075800123628626 -1.903322355497316 0.4474988224343437
 }
 TexturedBackground {
@@ -35,7 +35,7 @@ Robot {
         translation 0.27 0 0
         rotation 0 -0.9999999999999999 0 1.5707953071795862
         children [
-          DEF WHEEL_R Shape {
+          DEF WHEEL Shape {
             appearance PBRAppearance {
               baseColor 1 1 0
               metalness 0
@@ -47,7 +47,7 @@ Robot {
           }
         ]
         name "wheel_right"
-        boundingObject USE WHEEL_R
+        boundingObject USE WHEEL
         physics Physics {
         }
       }
@@ -59,25 +59,17 @@ Robot {
       }
       device [
         RotationalMotor {
-          name "motor_right"
+          name "motor_left"
         }
       ]
       endPoint Solid {
         translation -0.27 0 0
         rotation 0 -0.9999999999999999 0 1.5707953071795862
         children [
-          DEF WHEEL_R Shape {
-            appearance PBRAppearance {
-              baseColor 1 1 0
-              metalness 0
-            }
-            geometry Cylinder {
-              height 0.03
-              radius 0.075
-            }
-          }
+          USE WHEEL
         ]
-        name "solid(1)"
+        name "wheel_left"
+        boundingObject USE WHEEL
       }
     }
     DEF bodemplaat Pose {
