@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.10041299314092118 0.09315328279323416 0.990575437164341 1.6552385846565125
-  position 0.020075800123628626 -1.903322355497316 0.4474988224343437
+  orientation -0.11041770024057872 0.08271188441286594 0.9904376182528883 1.8650069276382744
+  position 0.2588100671458809 -1.4884087961296013 0.39642720211273647
 }
 TexturedBackground {
 }
@@ -19,12 +19,12 @@ RectangleArena {
   wallHeight 0.001
 }
 Robot {
-  translation 0 0 0.07
+  translation 0 0 0.08
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
         axis 0 1 0
-        anchor 0.5 0.5 0.5
+        anchor 0.27 0 0
       }
       device [
         RotationalMotor {
@@ -48,14 +48,14 @@ Robot {
         ]
         name "wheel_right"
         boundingObject USE WHEEL
-        physics Physics {
+        physics DEF WHEEL_PH Physics {
         }
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
         axis 0 1 0
-        anchor 0.5 0.5 0.5
+        anchor -0.27 0 0
       }
       device [
         RotationalMotor {
@@ -70,6 +70,7 @@ Robot {
         ]
         name "wheel_left"
         boundingObject USE WHEEL
+        physics USE WHEEL_PH
       }
     }
     DEF bodemplaat Pose {
@@ -364,4 +365,21 @@ Robot {
   ]
   name "AGV"
   model "proANT436"
+  boundingObject Group {
+    children [
+      USE hoek_onder_3l
+      USE hoek_onder_3r
+      USE hoek_onder_2l
+      USE hoek_onder_2r
+      USE hoek_onder_1l
+      USE hoek_onder_1r
+      USE middenstuk_boven_a
+      USE middenstuk_boven_b
+      USE middenstuk_boven_c
+      USE middenstuk_boven_d
+    ]
+  }
+  physics Physics {
+  }
+  controller "agv_controller"
 }
