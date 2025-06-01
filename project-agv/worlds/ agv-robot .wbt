@@ -7,8 +7,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.11041770024057872 0.08271188441286594 0.9904376182528883 1.8650069276382744
-  position 0.2588100671458809 -1.4884087961296013 0.39642720211273647
+  position -1.8368064860356632 1.1320193963202493e-32 -4.20598375844134e-16
 }
 TexturedBackground {
 }
@@ -21,6 +20,52 @@ RectangleArena {
 Robot {
   translation 0 0 0.08
   children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint DEF support_wheel_1 Solid {
+        translation 0.15 -0.25 -0.05
+        rotation 0 1 0 1.5707996938995747
+        children [
+          DEF SUPPORT_WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.03
+              radius 0.025
+            }
+          }
+        ]
+        boundingObject USE SUPPORT_WHEEL
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint DEF support_wheel_3 Solid {
+        translation -0.15 0.25 -0.05
+        rotation 0 1 0 1.5707996938995747
+        children [
+          USE SUPPORT_WHEEL
+        ]
+        name "solid(2)"
+        boundingObject USE SUPPORT_WHEEL
+        physics Physics {
+        }
+      }
+    }
     HingeJoint {
       jointParameters HingeJointParameters {
         anchor 0.27 0 0
