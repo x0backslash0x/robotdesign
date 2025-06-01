@@ -23,7 +23,6 @@ Robot {
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
-        axis 0 1 0
         anchor 0.27 0 0
       }
       device [
@@ -54,7 +53,6 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        axis 0 1 0
         anchor -0.27 0 0
       }
       device [
@@ -380,6 +378,7 @@ Robot {
     ]
   }
   physics Physics {
+    mass 1
   }
   controller "agv_controller"
 }
