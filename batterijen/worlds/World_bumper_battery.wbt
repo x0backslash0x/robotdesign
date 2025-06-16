@@ -4,12 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/elisa/protos/Elisa3.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2367433468183522 0.14589147496210617 0.960556227021941 2.0726662760165624
-  position 0.10847167383474551 -0.21983228859839585 0.19604600292904217
+  orientation -0.3350095439080258 0.2760173883089512 0.9008790189818177 1.8645656884229316
+  position 0.044366049631625604 -0.7100676267952769 0.6817832479972794
 }
 TexturedBackground {
 }
@@ -39,4 +40,38 @@ Elisa3 {
       ]
     }
   ]
+}
+Solid {
+  translation -0.24 -0.18 0
+  rotation 0 0 1 1.0472
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "obstacle1"
+}
+Solid {
+  translation 0.135 0.0023946 0
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "obstacle2"
+}
+WoodenBox {
+  translation -0.224645 0.204645 0.05
+  rotation 0 0 1 -0.785395307179586
+  name "box"
+  size 0.1 0.1 0.1
 }
