@@ -19,6 +19,7 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Elisa3 {
+  controller "Elisa_bumper"
   extensionSlot [
     TouchSensor {
       translation 0.03 0 0.01
