@@ -1,16 +1,42 @@
 #VRML_SIM R2023b utf8
+
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/elisa/protos/Elisa3.proto"
+
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773 0.5773 0.5773 2.0944
-  position 0 0 10
+  orientation -0.2367433468183522 0.14589147496210617 0.960556227021941 2.0726662760165624
+  position 0.10847167383474551 -0.21983228859839585 0.19604600292904217
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+}
+Elisa3 {
+  extensionSlot [
+    TouchSensor {
+      translation 0.03 0 0.01
+      children [
+        Solid {
+          children [
+            DEF BUMPER Shape {
+              appearance PBRAppearance {
+                metalness 0
+              }
+              geometry Box {
+                size 0.001 0.02 0.001
+              }
+            }
+          ]
+          name "bumper"
+          boundingObject USE BUMPER
+        }
+      ]
+    }
+  ]
 }
