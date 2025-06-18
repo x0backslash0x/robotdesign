@@ -1,0 +1,79 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.33424691484661007 0.5267941243791966 0.781515803061639 1.3638873888145295
+  position -1.1753760659913313 -2.623668982222246 2.9804111801416275
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+E-puck {
+  controller "my_controller_wall_follower"
+}
+Wall {
+  translation 0 0.05 0
+  name "wall 1"
+  size 1 0.01 0.1
+}
+Wall {
+  translation -0.125 -0.5 0
+  name "wall 2"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation -0.75 -0.5 0
+  name "wall 3"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.75 -0.5 0
+  name "wall 4"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.75 -0.81 0
+  rotation 0 0 1 1.5707996938995747
+  name "wall 5"
+  size 0.375 0.01 0.1
+}
+Wall {
+  translation -0.125 -0.69 0
+  rotation 0 0 1 1.5707996938995747
+  name "wall 6"
+  size 0.375 0.01 0.1
+}
+Wall {
+  translation 0 0.525 0
+  rotation 0 0 1 1.5708003061004252
+  name "wall 7"
+  size 0.95 0.01 0.1
+}
+Wall {
+  translation -0.81 0.525 0
+  rotation 0 0 1 1.5708003061004252
+  name "wall 8"
+  size 0.95 0.01 0.1
+}
+Wall {
+  translation 0.55 0.525 0
+  name "wall 9"
+  size 0.5 0.01 0.1
+}
+Wall {
+  translation 0.795 0.2825 0
+  rotation 0 0 1 1.5707996938995747
+  name "wall 10"
+  size 0.475 0.01 0.1
+}

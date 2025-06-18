@@ -1,0 +1,31 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3362938757939655 0.3379811052416448 0.879019454621517 1.6944322752038616
+  position -0.022900033282740706 -4.495304904928807 4.460359555718476
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  name "playfield"
+  floorSize 4 2
+  floorTileSize 4 2
+  floorAppearance Appearance {
+    texture ImageTexture {
+      url [
+        "../../info/playfield.png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+    }
+    name "track"
+  }
+}
