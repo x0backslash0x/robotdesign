@@ -1,2 +1,4 @@
 # Webots temp world files
 *.wbproj
+venv
+.idea
