@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.3350095439080258 0.2760173883089512 0.9008790189818177 1.8645656884229316
-  position 0.044366049631625604 -0.7100676267952769 0.6817832479972794
+  orientation -0.37018525406456015 0.3729734764914767 0.850795900029507 1.7242771807287793
+  position -0.02003761888469896 -1.0691322042968987 1.0439318652166938
 }
 TexturedBackground {
 }
@@ -39,6 +39,7 @@ Elisa3 {
           boundingObject USE BUMPER
         }
       ]
+      boundingObject USE BUMPER
     }
   ]
 }
