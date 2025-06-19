@@ -13,9 +13,46 @@ varVelocityStopped = 0.0
 #endregion
 
 #region PID controller class
+class PID_Controller:
+    def __init__(self, iKp, iKi, iKd, iSP, iLMN_HLM, iLMN_LLM):
+        self.Kp = iKp  # proportional term / 0.0 = switched off
+        self.Ki = iKi  # integral term / 0.0 = switched off
+        self.Kd = iKd  # derivate term / 0.0 = switched off
+        self.SP = iSP  # setpoint
+        self.prev_ER = 0  # error from previous scan
+        self.integral = 0
+        self.derivative = 0
+        self.LMN_HLM = iLMN_HLM  # LMN high Limit
+        self.LMN_LLM = iLMN_LLM  # LMN low limit
 
+    def compute(self, iPV, iTimestep):
+        # Calculate error
+        ER = self.SP - iPV
 
+        # Proportional term
+        P_out = self.Kp * ER
 
+        # Integral term
+        self.integral += ER * iTimestep
+        I_out = self.Ki * self.integral
+
+        # Derivative term
+        self.derivative = (ER - self.prev_ER) / iTimestep
+        D_out = self.Kd * self.derivative
+
+        # Compute total output
+        oLMN = P_out + I_out + D_out
+
+        # Correct LMN if not in range of high and low limits
+        if oLMN > self.LMN_HLM:
+            oLMN = self.LMN_HLM
+        elif oLMN < self.LMN_LLM:
+            oLMN = self.LMN_LLM
+
+        # Update previous error
+        self.prev_ER = ER
+
+        return oLMN
 #endregion
 
 def defRobot(robot):
@@ -40,7 +77,7 @@ def defRobot(robot):
     #endregion
 
     # region --Initialize PID controller
-
+    devPIDController = PID_Controller(28.0, 10.0, 0.0, 0.0, varMaxSpeed, -varMaxSpeed)
     #endregion
 
     #region -- Initialize plot lists
@@ -67,11 +104,12 @@ def defRobot(robot):
         #endregion
 
         #region --PID control
-
+        varSpeed = devPIDController.compute(varSensAngle_RAD, varTimestep)
+        print(f"speed: {varSpeed}")
         #endregion
 
         #region --Set the robot varSpeed (left wheel, right wheel).
-        varSpeed = varMaxSpeed * 0.5
+        #varSpeed = varMaxSpeed * 0.5
         devRiMotor.setVelocity(varSpeed)
         devLeMotor.setVelocity(varSpeed)
         #endregion
