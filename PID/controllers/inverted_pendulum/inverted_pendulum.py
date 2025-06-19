@@ -53,14 +53,17 @@ def defRobot(robot):
     while robot.step(varTimestep) != -1:
         #region --Readout the angle sensor
         varSensAngle_RAD = sensPendulum.getValue()
-        print(varSensAngle_RAD)
+        varSensAngle_RADAbs = math.fabs(varSensAngle_RAD)
+        print(f"Pendulum angle: {varSensAngle_RAD}")
+        print(f"Pendulum angle (abs): {varSensAngle_RADAbs}")
         #endregion
 
         #region --Stop the robot when the pendulum falls.
         #if math.fabs(varSensAngle_RAD) > math.pi * 0.5:
-        #    devLeMotor.setVelocity(0.0)
-        #    devRiMotor.setVelocity(0.0)
-        #    break
+        if varSensAngle_RADAbs > math.pi * 0.5:  # 1.57
+            devLeMotor.setVelocity(0.0)
+            devRiMotor.setVelocity(0.0)
+            break
         #endregion
 
         #region --PID control
