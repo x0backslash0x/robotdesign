@@ -4,6 +4,13 @@ import math #used for angle [RAD] calculations
 import matplotlib.pyplot as plt #used to create a plot
 import datetime as dt #used to create the plot time based x-axis
 
+#region initialize variables
+varNameRiMotor = 'right wheel motor'
+varNameLeMotor = 'left wheel motor'
+varMotorRotatePosition = float('inf') # spins the motor infinitely
+varVelocityStopped = 0.0
+#endregion
+
 #region PID controller class
 
 
@@ -20,7 +27,13 @@ def defRobot(robot):
     #endregion
 
     #region --Initialize the motors and retrieve the max. speed
+    devRiMotor = robot.getDevice(varNameRiMotor)
+    devRiMotor.setPosition(varMotorRotatePosition)
+    devRiMotor.setVelocity(varVelocityStopped)
 
+    devLeMotor = robot.getDevice(varNameLeMotor)
+    devLeMotor.setPosition(varMotorRotatePosition)
+    devLeMotor.setVelocity(varVelocityStopped)
     varMaxSpeed = min(devRiMotor.getMaxVelocity(), devLeMotor.getMaxVelocity())
     #endregion
 
@@ -41,10 +54,10 @@ def defRobot(robot):
         #endregion
 
         #region --Stop the robot when the pendulum falls.
-        if math.fabs(varSensAngle_RAD) > math.pi * 0.5:
-            devLeMotor.setVelocity(0.0)
-            devRiMotor.setVelocity(0.0)
-            break
+        #if math.fabs(varSensAngle_RAD) > math.pi * 0.5:
+        #    devLeMotor.setVelocity(0.0)
+        #    devRiMotor.setVelocity(0.0)
+        #    break
         #endregion
 
         #region --PID control
@@ -52,12 +65,14 @@ def defRobot(robot):
         #endregion
 
         #region --Set the robot varSpeed (left wheel, right wheel).
-
+        varSpeed = varMaxSpeed * 0.5
+        devRiMotor.setVelocity(varSpeed)
+        devLeMotor.setVelocity(varSpeed)
         #endregion
 
         #region --Store the angle, speed and time values into the lists
 
-        lstTimeValues.append(dt.datetime.now())
+        #lstTimeValues.append(dt.datetime.now())
 
         #endregion
 
