@@ -20,6 +20,9 @@ RectangleArena {
 }
 Elisa3 {
   controller "Elisa_bumper"
+  battery [
+    90, 100, 0.0001
+  ]
   extensionSlot [
     TouchSensor {
       translation 0.03 0 0.01
