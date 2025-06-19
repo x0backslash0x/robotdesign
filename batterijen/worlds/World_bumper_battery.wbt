@@ -46,7 +46,7 @@ Solid {
   translation -0.24 -0.18 0
   rotation 0 0 1 1.0472
   children [
-    Shape {
+    DEF obstacle Shape {
       appearance PBRAppearance {
       }
       geometry Box {
@@ -55,6 +55,7 @@ Solid {
     }
   ]
   name "obstacle1"
+  boundingObject USE obstacle
 }
 Solid {
   translation 0.135 0.0023946 0
@@ -69,6 +70,7 @@ Solid {
     }
   ]
   name "obstacle2"
+  boundingObject USE obstacle
 }
 WoodenBox {
   translation -0.224645 0.204645 0.05
