@@ -7,6 +7,7 @@ import datetime as dt #used to create the plot time based x-axis
 #region initialize variables
 varNameRiMotor = 'right wheel motor'
 varNameLeMotor = 'left wheel motor'
+varNamePendulum = 'pendulum sensor'
 varMotorRotatePosition = float('inf') # spins the motor infinitely
 varVelocityStopped = 0.0
 #endregion
@@ -23,7 +24,8 @@ def defRobot(robot):
     #endregion
 
     #region --Initialize pendulum angle sensor
-
+    sensPendulum = robot.getDevice(varNamePendulum)
+    sensPendulum.enable(varTimestep)
     #endregion
 
     #region --Initialize the motors and retrieve the max. speed
@@ -50,7 +52,8 @@ def defRobot(robot):
     # Main loop: perform a simulation step until the simulation is over.
     while robot.step(varTimestep) != -1:
         #region --Readout the angle sensor
-
+        varSensAngle_RAD = sensPendulum.getValue()
+        print(varSensAngle_RAD)
         #endregion
 
         #region --Stop the robot when the pendulum falls.
