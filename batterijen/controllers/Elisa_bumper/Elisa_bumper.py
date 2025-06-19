@@ -31,6 +31,9 @@ def defRobotControl(robot):
     #Enable bumper sensor
     devBumper = robot.getDevice('touch sensor')
     devBumper.enable(varTimeStep)
+
+    #Enable battery sensor
+    robot.batterySensorEnable(varTimeStep)
     
     #Reset velocity of both wheels
     varSpeedLe = 0.0
@@ -39,8 +42,11 @@ def defRobotControl(robot):
     # - perform simulation steps until Webots is stopping the controller
     while robot.step(varTimeStep) != -1:
         #Move forward
-        varSpeedLe = varMaxSpeed 
-        varSpeedRi = varMaxSpeed 
+        varSpeedLe = varMaxSpeed
+        varSpeedRi = varMaxSpeed
+
+        #Read the battery state
+        print(robot.batterySensorGetValue())
      
         if devBumper.getValue() == 1.0:
             varSpeedLe = -varMaxSpeed
